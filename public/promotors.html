@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProMotors professional car service, maintenance and repair.">
+  <title>ProMotors — Car Service & Repair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-label="Loading website">
+    <div class="loader-content"><span class="loader-wheel">✥</span><strong>PRO<span>MOTORS</span></strong><div class="loader-track"><i></i></div><small>LOADING...</small></div>
+  </div>
+  <!-- Fixed right-side quick-access toolbar -->
+  <aside class="side-toolbar" aria-label="Quick links">
+    <a class="side-tool" href="#pricing" aria-label="Shop and pricing" title="Shop and pricing">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="19" cy="20" r="1.5"/><path d="M2 3h2l2.4 12.2a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 1.9-1.4L22 8H5"/></svg>
+    </a>
+    <a class="side-tool" href="#services" aria-label="Our services" title="Our services">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5h14v17H5z"/><path d="M8 3.5v17M5 17.5h14"/></svg>
+    </a>
+    <a class="side-tool" href="tel:+391234567789" aria-label="Call customer support" title="Call customer support">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="4" height="7" rx="1.5"/><rect x="17" y="12" width="4" height="7" rx="1.5"/><path d="M17 19c-.5 1.5-2 2-4 2h-2"/></svg>
+    </a>
+    <button class="side-tool side-tool-menu" type="button" aria-label="Open quick navigation" aria-expanded="false" title="Quick navigation">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="6" height="6"/><rect x="14.5" y="3.5" width="6" height="6"/><rect x="3.5" y="14.5" width="6" height="6"/><rect x="14.5" y="14.5" width="6" height="6"/></svg>
+    </button>
+    <nav class="side-quick-links" aria-label="Quick navigation links">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#appointment">Appointment</a>
+    </nav>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="ProMotors home"><span class="brand-mark">✥</span><span>PRO<span>MOTORS</span></span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-item"><a href="#home">HOME <b>+</b></a></div>
+        <div class="nav-item has-dropdown"><a href="#about" aria-haspopup="true">PAGES <b>+</b></a><div class="dropdown"><a href="#about">About Us</a><a href="#process">How It Works</a><a href="#appointment">Appointment</a></div></div>
+        <div class="nav-item has-dropdown"><a href="#services" aria-haspopup="true">SERVICES <b>+</b></a><div class="dropdown"><a href="#services">Brake Repair</a><a href="#services">Engine Repair</a><a href="#services">Tire Repair</a><a href="#detailing">Car Detailing</a></div></div>
+        <div class="nav-item has-dropdown"><a href="#pricing" aria-haspopup="true">SHOP <b>+</b></a><div class="dropdown"><a href="#pricing">Service Plans</a><a href="#appointment">Book a Service</a></div></div>
+        <div class="nav-item"><a href="#articles">BLOG <b>+</b></a></div>
+      </nav>
+      <a class="phone" href="tel:+391234567789">+39 123 45 67 789</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero hero-slider" aria-label="Featured car services">
+      <div class="hero-slide active">
+        <div class="container hero-inner">
+          <div class="hero-copy"><span class="hero-kicker">PROFESSIONAL CAR CARE</span><h1>EXPERT CAR<br><em>SERVICE & REPAIR</em></h1><p>Reliable maintenance for every journey.</p><a class="angle-btn" href="#appointment">GET SERVICE</a></div>
+          <img class="hero-engine" src="assets/images/engine-cutaway.jpg" alt="Detailed view of a car engine and chassis">
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="container hero-inner">
+          <div class="hero-copy"><span class="hero-kicker">MAINTENANCE & REPAIRS</span><h1>KEEP YOUR CAR<br><em>RUNNING STRONG</em></h1><p>Quality workmanship from experienced technicians.</p><a class="angle-btn" href="#services">OUR SERVICES</a></div>
+          <img class="hero-engine" src="assets/images/maintenance-workshop.jpg" alt="Professional car maintenance workshop">
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="container hero-inner">
+          <div class="hero-copy"><span class="hero-kicker">DETAILING & CARE</span><h1>CARE THAT<br><em>SHINES THROUGH</em></h1><p>Give your vehicle the attention it deserves.</p><a class="angle-btn" href="#detailing">EXPLORE DETAILING</a></div>
+          <img class="hero-engine" src="assets/images/car-polishing.jpg" alt="Professional car polishing and detailing">
+        </div>
+      </div>
+      <button class="slider-arrow prev" type="button" aria-label="Previous slide">‹</button>
+      <button class="slider-arrow next" type="button" aria-label="Next slide">›</button>
+      <div class="slider-dots" aria-label="Choose slide"><button class="active" aria-label="Slide 1"></button><button aria-label="Slide 2"></button><button aria-label="Slide 3"></button></div>
+    </section>
+
+    <section class="stats-section" id="about">
+      <div class="container stats-grid">
+        <article class="stat"><strong>12+</strong><p>More than 12 years of operation in the field of Car Services</p></article>
+        <article class="stat"><strong>22K+</strong><p>International standard process and large factory system</p></article>
+        <article class="stat"><strong>500K+</strong><p>Employees in the whole system include many leading engineers</p></article>
+        <article class="stat"><strong>99%</strong><p>Service technology to satisfy customers needs and interests</p></article>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="services">
+      <div class="container">
+        <div class="section-heading"><h2>OUR SERVICES</h2><a class="angle-btn small" href="#appointment">ALL SERVICES</a></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">⚒</div><h3>BRAKE REPAIR</h3><p>You get used to your brakes. Brake pads and rotors wear out from the immense friction and heat they encounter. Air gets into brake lines....</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+          <article class="service-card"><div class="service-icon">▤</div><h3>ENGINE REPAIR</h3><p>The check engine usually indicates a need to replace one or more parts of your engine or exhaust system: oxygen sensor, catalytic converter, mass...</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+          <article class="service-card"><div class="service-icon">◎</div><h3>TIRE REPAIR</h3><p>You need new tires, and you have questions. What type of tire do I really need? What do terms like “all-season” and “all-terrain” really mean?...</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+          <article class="service-card"><div class="service-icon">▣</div><h3>COOLING SYSTEM</h3><p>An overheated engine that leaves you stranded on the side of the road is a hassle. But overheating is one of many signs of trouble...</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+          <article class="service-card"><div class="service-icon">▦</div><h3>BATTERY REPAIR</h3><p>Your vehicle just won't start. You turn on the ignition, and all you get is the telltale clicking noise. Possibly followed by competing pronouncements of...</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+          <article class="service-card"><div class="service-icon">⌁</div><h3>STEERING REPAIR</h3><p>Your steering and suspension systems work together to keep your tires on the pavement and your vehicle under control – until a power steering problem...</p><a class="detail-link" href="#appointment"><i>›</i> DETAILS SERVICE</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="maintenance section-pad">
+      <div class="narrow-container">
+        <h2 class="line-title">MAINTENANCE &amp; REPAIRS</h2>
+        <div class="video-cover"><img src="assets/images/maintenance-workshop.jpg" alt="Car maintenance workshop"><button class="play" aria-label="Play maintenance video">▶</button></div>
+      </div>
+    </section>
+
+    <section class="pricing section-pad" id="pricing">
+      <div class="narrow-container pricing-grid">
+        <div class="pricing-intro"><h2>AFFORDABLE<br>PRICING PLANS</h2><p>We provide the best car service, recommend the best products through an independent review process.</p><ul><li>SAME DAY SERVICE</li><li>CONVENIENT LOCATION</li><li>ONLINE APPOINTMENT</li></ul></div>
+        <article class="price-card"><small>PERSONAL</small><strong>$ 49.99</strong><span>per month</span><hr><ul><li>Scheduled servicing <b>✓</b></li><li>Component wear reminders <b>✓</b></li><li>Introduce new revenue streams <b>✓</b></li><li class="muted">All routine maintenance <b>✓</b></li><li class="muted">24/7 customer service <b>✓</b></li></ul><a class="angle-btn full" href="#appointment">GET STARTED</a></article>
+        <article class="price-card"><small>PROFESSIONAL</small><strong>$ 99.99</strong><span>per month</span><hr><ul><li>Scheduled servicing <b>✓</b></li><li>Component wear reminders <b>✓</b></li><li>Introduce new revenue streams <b>✓</b></li><li>All routine maintenance <b>✓</b></li><li>24/7 customer service <b>✓</b></li></ul><a class="angle-btn full" href="#appointment">GET STARTED</a></article>
+      </div>
+    </section>
+
+    <section class="detailing" id="detailing">
+      <div class="detail-row"><img src="assets/images/wheel-detailing.jpg" alt="Technician cleaning a car wheel"><div class="detail-copy"><span class="ghost">SERVICES</span><h2>CAR EXTERIOR CLEANING: BASIC DETAILING</h2><ul class="feature-list"><li>SAME DAY SERVICE</li><li>ONLINE APPOINTMENT</li><li>CONVENIENT LOCATION</li><li>COMPLIMENTARY SHUTTLE</li></ul><a class="angle-btn small" href="#appointment">GET SERVICE</a></div></div>
+      <div class="detail-row reverse"><div class="detail-copy"><span class="ghost">SERVICE</span><h2>RUBBING, WAXING, AND POLISHING</h2><p>Our technicians have undergone the most extensive and stringent car detail training program. And the only car that matters is yours because we will detail it to your complete satisfaction.</p><a class="angle-btn small" href="#appointment">GET SERVICE</a></div><img src="assets/images/car-polishing.jpg" alt="Car polishing and waxing"></div>
+    </section>
+
+    <section class="process section-pad" id="process">
+      <div class="narrow-container process-grid">
+        <div><h2>HOW TO SERVICE<br>YOUR CAR</h2><p>Rather than letting your services go by, take these steps to keep your car in good shape until you can afford a full service.</p></div>
+        <div class="steps">
+          <article><b>01</b><h3>MAKE AN APPOINTMENT</h3><p>Promotions has made it easy to schedule an appointment online at a location near you in a few simple steps, every schedule for customers.</p></article>
+          <article><b>02</b><h3>SELECT SERVICE</h3><p>We specialize in car services and have more than 20 years of experience in one. We care car guys from day one. We love and respect cars.</p></article>
+          <article><b>03</b><h3>CONFIRM REQUEST</h3><p>Has your request been confirmed? Reduce no-shows, save time, and focus on serving clients is our top priority.</p></article>
+          <article><b>04</b><h3>GET YOUR CAR</h3><p>It is a vehicle inspection that keeps your car in a reliable, safe and fully-functioning condition based on guidelines set out by the vehicle.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles section-pad" id="articles">
+      <div class="narrow-container">
+        <h2 class="line-title">POPULAR ARTICLES</h2>
+        <article class="featured-article"><img src="assets/images/article-engine.jpg" alt="Engine components"><div><span>REPAIR</span><h3>SIGNS YOUR CAR BATTERY HAS<br>TO BE REPLACED</h3></div></article>
+        <div class="article-grid">
+          <article><img src="assets/images/article-wheel-alignment.jpg" alt="Wheel alignment"><span>SPORT CARS</span><h3>WHEEL ALIGNMENT VS. FRONT END ALIGNMENT</h3><small>Jan, 09 2023　•　No Comments</small><a href="#appointment">› READ MORE</a></article>
+          <article><img src="assets/images/article-transmission.jpg" alt="Car transmission"><span>TECHNOLOGY</span><h3>HOW TO CHECK TRANSMISSION FLUID FAST</h3><small>Jan, 09 2023　•　No Comments</small><a href="#appointment">› READ MORE</a></article>
+          <article><img src="assets/images/article-engine-bay.jpg" alt="Car engine bay"><span>TUNING</span><h3>HOW TO MAKE THE ENGINE WORK EFFICIENTLY</h3><small>Jan, 09 2023　•　No Comments</small><a href="#appointment">› READ MORE</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="appointment section-pad" id="appointment">
+      <div class="narrow-container">
+        <span class="ghost">CONTACT US</span><h2>REQUEST AN APPOINTMENT ONLINE</h2>
+        <p>After you submit the form, a representative will call you back with the information<br class="desktop-only"> you'll need to make an appointment.</p>
+        <form id="appointment-form">
+          <label>YOUR NAME<input type="text" name="name" placeholder="Enter Your Name" required></label>
+          <label>YOUR EMAIL<input type="email" name="email" placeholder="Enter Your Email" required></label>
+          <label>SELECT DATE<input type="date" name="date" required></label>
+          <label>SELECT TIME<input type="time" name="time" required></label>
+          <label class="wide">YOUR MESSAGE<textarea name="message" placeholder="Describe Your Problem" rows="2"></textarea></label>
+          <button class="angle-btn submit-btn" type="submit">SEND MESSAGE</button>
+          <p class="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="narrow-container footer-grid">
+      <div class="footer-about"><a class="brand" href="#home"><span class="brand-mark">✥</span><span>PRO<span>MOTORS</span></span></a><p>Every service is rigorously screened and constantly rated to ensure you get the best quality.</p><small>Support center 24/7</small><strong>+1 123 456-7890</strong></div>
+      <div><h3>ABOUT US</h3><a href="#about">ABOUT US</a><a href="#about">OUR TEAM</a><a href="#services">OUR WORKS</a><a href="#articles">FAQ</a></div>
+      <div><h3>POPULAR SERVICES</h3><a href="#services">TIRE REPAIR</a><a href="#services">BRAKE REPAIR</a><a href="#services">ENGINE REPAIR</a><a href="#services">STEERING REPAIR</a></div>
+      <div class="footer-services"><h3>&nbsp;</h3><a href="#services">COOLING SYSTEM</a><a href="#services">WHEEL ALIGNMENT</a><a href="#services">BATTERY STARTING</a><a href="#services">SUSPENSION REPAIR</a></div>
+      <div class="subscribe"><h3>SUBSCRIBE</h3><form id="subscribe-form"><label>YOUR EMAIL<input type="email" placeholder="Enter Your Email Address" required></label><button class="angle-btn small" type="submit">SUBSCRIBE</button></form></div>
+    </div>
+    <div class="copyright"> <span>BravisThemes</span> © ProMotors Theme. All rights reserved Copyrights 2024</div>
+  </footer>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
