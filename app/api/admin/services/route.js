@@ -4,6 +4,8 @@ import { cookies } from "next/headers";
 import { jwtVerify } from "jose";
 import pool from "@/lib/db";
 
+export const runtime = "nodejs";
+
 async function isAdmin() {
   try {
     const cookieStore = await cookies();
@@ -43,6 +45,8 @@ export async function GET() {
       services,
     });
   } catch (error) {
+    console.error("Fetch services error:", error);
+
     return NextResponse.json(
       { success: false, message: "Unable to fetch services" },
       { status: 500 }
@@ -75,44 +79,65 @@ export async function POST(request) {
 
     if (!title?.trim() || !slug?.trim()) {
       return NextResponse.json(
-        { success: false, message: "Title and slug are required" },
+        {
+          success: false,
+          message: "Title and slug are required",
+        },
         { status: 400 }
       );
     }
 
+    // Generate the next ID because TiDB table has no AUTO_INCREMENT
+    const [[nextIdRow]] = await pool.query(
+      "SELECT COALESCE(MAX(id), 0) + 1 AS nextId FROM services"
+    );
+
     const [result] = await pool.execute(
       `INSERT INTO services
-      (title, slug, short_description, full_description,
+      (id, title, slug, short_description, full_description,
        icon, image, status, sort_order)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
+        nextIdRow.nextId,
         title.trim(),
         slug.trim(),
         short_description || "",
         full_description || "",
-        icon || null,
-        image || null,
+        icon || "",
+        image || "",
         status === "inactive" ? "inactive" : "active",
-        Number.isInteger(Number(sort_order)) ? Number(sort_order) : 0,
+        Number.isInteger(Number(sort_order))
+          ? Number(sort_order)
+          : 0,
       ]
     );
 
-    return NextResponse.json({
-      success: true,
-      message: "Service created successfully",
-      id: result.insertId,
-    }, { status: 201 });
-
+    return NextResponse.json(
+      {
+        success: true,
+        message: "Service created successfully",
+        id: result.insertId || nextIdRow.nextId,
+      },
+      { status: 201 }
+    );
   } catch (error) {
+    console.error("Create service error:", error);
+
     if (error.code === "ER_DUP_ENTRY") {
       return NextResponse.json(
-        { success: false, message: "This slug already exists" },
+        {
+          success: false,
+          message: "This slug or ID already exists",
+        },
         { status: 409 }
       );
     }
 
     return NextResponse.json(
-      { success: false, message: "Unable to create service" },
+      {
+        success: false,
+        message: "Unable to create service",
+      },
       { status: 500 }
     );
   }
